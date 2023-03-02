@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0267d3da52.js"></script>
+</head>
+<body>
+
+    <div id="wrapper" >
+        <h1>Weather App</h1>
+        <div class="weather">
+            <p class="my-weather" id="geo-weather">Your Weather</p>
+            <p class="search-weather" id="search-weather">Search Weather</p>
+        </div>
+        <!-- search weather -->
+        <div class="user-weather" id="user-weather">
+            <input type="text" name="" id="input" placeholder="Enter City Name" autocomplete="off" class="search-bar">
+            <span id="btn"><i class="fa-solid fa-magnifying-glass"></i></span> 
+            </input>
+        </div>
+        <!-- loader -->
+        <div id="loader"></div>
+        <!-- asking for permission -->
+        <div class="permission-div">
+            <i class="fa-solid fa-4x fa-location-dot"></i>
+            <div id="failed"></div>
+            <button class="permission" id="permission">Grant Permission</button>
+        </div>
+        <!--  weather info -->
+        <div class=" hidden-geo-weather" id="weather-box">
+            <div style="display: flex; justify-content:center; gap: 10px; align-items: center;">
+                <div id="city"></div> <img src="" alt="" id="country" width="20px" height="20px">
+            </div>
+            <p class="weather-type"></p>
+            <img src="" alt="" id="weather-img">
+            <p id="show-weather"> </p>
+            <div class="weather-details">
+                <div class="specific-detail">
+                    <img src="https://codehelp-weather-app.netlify.app/assets/wind.png" alt="" width="50px">
+                    <p class="weather-detail-text">WINDSPEED</p>
+                    <p id="windspeed" class="weather-detail-number"></p>
+                </div>
+                <div class="specific-detail">
+                    <img src="https://codehelp-weather-app.netlify.app/assets/humidity.png" alt="" width="50px" style="object-fit: cover;">
+                    <p class="weather-detail-text">HUMIDITY</p>
+                    <p id="humidity" class="weather-detail-number"></p>
+                </div>
+                <div class="specific-detail">
+                    <img src="https://codehelp-weather-app.netlify.app/assets/cloud.png" alt="" width="50px">
+                    <p class="weather-detail-text">CLOUDS</p>
+                    <p id="clouds" class="weather-detail-number"> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
